@@ -3,4 +3,4 @@
 import functions
 
 # functions.changeISO()
-functions.movieRecord(5)
+functions.lensZoom()
