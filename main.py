@@ -2,5 +2,4 @@
 # import json
 import functions
 
-# functions.changeISO()
-functions.lensZoom()
+functions.checkLens()
