@@ -48,7 +48,7 @@ SHOOTING AND RECORDING
 # Sending the request to take a still photo
 def shootingStill():
     shooting_url = main_url + "/shooting/control/shutterbutton"
-    shooting_response = requests.post(shooting_url, json={"af": True})
+    shooting_response = requests.post(shooting_url, json={"af": config.AUTOFOCUS})
     print("\nPhoto taken")
     print("Status code:", shooting_response.status_code)
     print("Entire Post Response")
@@ -77,10 +77,10 @@ def movieMode(status):
     print("\nMoive mode set", status)
     print("Status code:", movie_response.status_code)
 
-def changeISO():
+def changeISO(iso):
     # Changing ISO
     iso_url = main_url +"/shooting/settings/iso"
-    iso_response = requests.put(iso_url, json={"value": "8000"})
+    iso_response = requests.put(iso_url, json={"value": iso})
     print("\nStatus code:", iso_response.status_code)
     print("Entire Post Response")
     print(iso_response.json)

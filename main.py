@@ -1,5 +1,6 @@
-# import requests
-# import json
 import functions
 
-functions.checkLens()
+# Take a photo
+functions.changeISO("auto")
+#functions.movieMode("off")
+functions.shootingStill()
